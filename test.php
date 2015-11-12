@@ -3,7 +3,7 @@ include 'includes/overall/header.php';
 $user = new User();
 
 
-$pagination = new Pagination('picture','test.php');
+$pagination = new Pagination('thumbnail','test.php');
 
 $pageRows=4;//eingabe feld, um zu dem user die wahl zu lassen wieviele beiträge er pro seite sehen will
 $lastPage=$pagination->lastPage($pageRows);
@@ -33,7 +33,7 @@ if($user->isLoggedIn()) {
 
 
     foreach($content as $picture){
-    echo '<img src="'.Config::get('pictures/dirOrginal').$picture->name .'" width="50" height="50"><br>';
+    echo '<img src="'.Config::get('pictures/dirThumbnail').$picture->name .'" ><br>';
     }
     ?>
 
